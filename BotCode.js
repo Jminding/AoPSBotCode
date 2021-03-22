@@ -1,7 +1,7 @@
 let Discord = require("discord.js");
 let client = new Discord.Client();
 
-client.login("ODE0MzMzODc1NDI5OTY1ODQ0.YDcVhQ.FuL_wXEr1vP644XHEKyUPXHkHu0");
+client.login("");
 
 client.on("message", message => {
   if (message.content === "aops invite") {
