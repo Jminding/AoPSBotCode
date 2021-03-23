@@ -1,7 +1,7 @@
 let Discord = require("discord.js");
 let client = new Discord.Client();
 const TOKEN = process.env.TOKEN;
-client.login(TOKEN);
+client.login(TOKEN); // a more secure way for the token (since this code is going on GitHub)
 
 client.on("message", message => {
   if (message.content === "aops invite") {
@@ -11,7 +11,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content === "aops botinfo") {
     return message.channel.send(
-      "AoPSBot is a utilities bot created by Synthetic#0920 and worked on by Jminding#6728 specifically for the AoPS discord server. To get started, type a command!"
+      "AoPSBot is a utilities bot created by Synthetic#0920 and worked on by Jminding#6728 specifically for The AoPS Discord Server. To get started, type a command!"
     );
   }
 });
@@ -82,7 +82,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content === "aops support") {
     return message.channel.send(
-      "Contact Synthetic#0920 or Jminding#6728 for help!"
+      "Contact Synthetic#0920 or @Jminding#6728 for help!"
     );
   }
 });
@@ -99,7 +99,7 @@ client.on("message", message => {
   }
 });
 client.on("message", message => {
-  if (message.content === "bot prefix") {
+  if (message.content === "aops prefix") {
     return message.channel.send("aops");
   }
 });
@@ -115,12 +115,19 @@ client.on("message", message => {
     );
   }
 });
+client.on("message", message => {
+  if (message.content === "aops rickroll") {
+    return message.channel.send(
+      'Here is your rickroll: https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    );
+  }
+});
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setPresence({
     status: "online", //You can show online, idle....
     game: {
-      name: 'aops.com | aops help', //The message shown
+      name: 'aops.com | aops help\nBot programmed by Synthetic#0920 and Jminding#6728', //The message shown
       type: "PLAYING" //PLAYING: WATCHING: LISTENING: STREAMING:
     }
   });
