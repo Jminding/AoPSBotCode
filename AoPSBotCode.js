@@ -1,7 +1,7 @@
 let Discord = require("discord.js");
 let client = new Discord.Client();
 
-client.login("ODIzNjQ5NDcxMTgyNTM2NzQ0.YFj5WA.mBH8Pgq3_wIHd9n-Ltip0xLJCiU");
+client.login("No I'm not putting the token in this code");
 
 client.on("message", message => {
   if (message.content === "aops invite") {
